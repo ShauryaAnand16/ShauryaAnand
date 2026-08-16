@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a73e8">
+<title>SRM Semester Calendar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">SRM</div>
+    <div>
+      <h1>SRM Semester Calendar</h1>
+      <p>Faculty of Engineering and Technology • Kattankulathur</p>
+    </div>
+  </div>
+  <div class="actions">
+    <button id="today">Today</button>
+    <button id="prev">‹</button>
+    <button id="next">›</button>
+    <button data-view="month">Month</button>
+    <button data-view="week">Week</button>
+    <button data-view="day">Day</button>
+  </div>
+</header>
+<main>
+  <div class="toolbar">
+    <div>
+      <h2 id="title"></h2>
+      <div id="info"></div>
+    </div>
+    <label>Jump to date <input id="date" type="date"></label>
+  </div>
+  <div id="calendar"></div>
+  <div id="dayView" class="hidden"></div>
+  <div class="legend">
+    <span><i class="c"></i>Classroom</span>
+    <span><i class="l"></i>Lab</span>
+    <span><i class="f"></i>Free</span>
+    <span><i class="h"></i>Holiday</span>
+  </div>
+</main>
+<footer>SRM semester calendar • Academic period: 21 July 2026 – 7 December 2026</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
