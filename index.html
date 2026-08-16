@@ -1,49 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#1a73e8">
-<title>SRM Semester Calendar</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="topbar">
-  <div class="brand">
-    <div class="logo">SRM</div>
-    <div>
-      <h1>SRM Semester Calendar</h1>
-      <p>Faculty of Engineering and Technology • Kattankulathur</p>
-    </div>
-  </div>
-  <div class="actions">
-    <button id="today">Today</button>
-    <button id="prev">‹</button>
-    <button id="next">›</button>
-    <button data-view="month">Month</button>
-    <button data-view="week">Week</button>
-    <button data-view="day">Day</button>
-  </div>
-</header>
-<main>
-  <div class="toolbar">
-    <div>
-      <h2 id="title"></h2>
-      <div id="info"></div>
-    </div>
-    <label>Jump to date <input id="date" type="date"></label>
-  </div>
-  <div id="calendar"></div>
-  <div id="dayView" class="hidden"></div>
-  <div class="legend">
-    <span><i class="c"></i>Classroom</span>
-    <span><i class="l"></i>Lab</span>
-    <span><i class="f"></i>Free</span>
-    <span><i class="h"></i>Holiday</span>
-  </div>
-</main>
-<footer>SRM semester calendar • Academic period: 21 July 2026 – 7 December 2026</footer>
-<script src="data.js"></script>
-<script src="app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f1e5"><title>SRM Day Order Calendar</title><link rel="stylesheet" href="style.css">
+</head><body>
+<header class="header"><div class="eyebrow">FET KATTANKULATHUR • SEMESTER 1</div><h1>Day Order Calendar</h1>
+<p>Classes don't run Monday-to-Friday here — they run Day 1 through Day 5. Tap any date to see your complete schedule.</p>
+<div class="today-card"><small>TODAY</small><strong id="todayLabel"></strong></div></header>
+<main><section class="controls"><button id="prev">‹</button><h2 id="monthTitle"></h2><button id="next">›</button><button id="today" class="todayBtn">TODAY</button></section>
+<div class="switch"><button class="active" id="monthBtn">▦ &nbsp; MONTH</button><button id="agendaBtn">☷ &nbsp; AGENDA</button></div>
+<section id="calendar"></section><section id="agenda" class="hidden"></section>
+<div class="legend"><span><i class="d1"></i>Day 1</span><span><i class="d2"></i>Day 2</span><span><i class="d3"></i>Day 3</span><span><i class="d4"></i>Day 4</span><span><i class="d5"></i>Day 5</span><span><i class="hd"></i>Holiday</span></div>
+<div class="tracked">140 DAYS TRACKED • 2026-07-21 TO 2026-12-07</div></main>
+<div id="sheet" class="sheet hidden"><div class="sheetPanel"><button id="closeSheet" class="close">×</button><div id="sheetContent"></div></div></div>
+<script src="data.js"></script><script src="app.js"></script></body></html>
